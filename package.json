@@ -1,0 +1,24 @@
+{
+  "name": "vscode-phoenix-snippets",
+  "displayName": "Phoenix Snippets",
+  "description": "Code snippets for Phoenix (Elixir) projects in VS Code (.ex, .html.eex, .html.leex)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.48.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "elixir",
+        "path": "./snippets/elixir.code-snippets"
+      },
+      {
+        "language": "html-eex",
+        "path": "./snippets/eex.code-snippets"
+      }
+    ]
+  }
+}

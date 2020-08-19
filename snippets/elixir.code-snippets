@@ -1,0 +1,106 @@
+{
+  // Elixir Snippets
+  "inspect": {
+    "prefix": "i",
+    "body": ["inspect($1)$0"],
+    "description": "inspect"
+  },
+
+  "IO.inspect/1": {
+    "prefix": "io",
+    "body": ["IO.inspect(${1}, label: \"${1}\")$0"]
+  },
+
+  "Plug": {
+    "prefix": "plug",
+    "body": [
+      "defmodule ${1:App}Web.${2:Plug} do",
+      "\timport Plug.Conn",
+      "\n\tdef init(opts), do: opts",
+      "\n\tdef call(conn, _opts) do",
+      "\t\t${0:conn}",
+      "\tend",
+      "end"
+    ]
+  },
+
+  // Phoenix Snippets
+  "Phoenix Controller": {
+    "prefix": "co",
+    "body": [
+      "defmodule ${1:App}Web.${2:Page}Controller do",
+      "\tuse ${1:App}Web, :controller",
+      "\n\tdef index(conn, _params) do",
+      "\t\t$0render(conn, \"index.html\")",
+      "\tend",
+      "end"
+    ]
+  },
+  "Phoenix LiveView": {
+    "prefix": "lv",
+    "body": [
+      "defmodule ${1:App}Web.${2:Page}Live do",
+      "\tuse ${1:App}Web, :live_view",
+      "\n\tdef render(assigns) do",
+      "\t\t~L\"\"\"",
+      "\t\t\"\"\"",
+      "\tend",
+      "\n\tdef mount(_params, _session, socket) do",
+      "\t\t$0{:ok, socket}",
+      "\tend",
+      "end"
+    ]
+  },
+  "Phoenix View": {
+    "prefix": "vi",
+    "body": [
+      "defmodule ${1:App}Web.${2:Page}View do",
+      "\tuse ${1:App}Web, :view$0",
+      "end"
+    ]
+  },
+  "Sigil L": {
+    "prefix": "sl",
+    "body": ["~L\"\"\"", "\t<div>$0</div>", "\"\"\""]
+  },
+
+  // LiveView Snippets
+  "LiveView assign": {
+    "prefix": "a",
+    "body": ["assign(socket, ${1:state}: $1)$0"],
+    "description": "assign"
+  },
+
+  "LiveView handle_event": {
+    "prefix": "he",
+    "body": [
+      "@impl true",
+      "def handle_event(\"${1:event}\", ${2:_payload}, socket) do",
+      "\t$0{:noreply, socket}",
+      "end"
+    ],
+    "description": "def handle_event"
+  },
+  "LiveView render": {
+    "prefix": "re",
+    "body": [
+      "@impl true",
+      "def render(assigns) do",
+      "\t~L\"\"\"",
+      "\t\t${1:Text}",
+      "\t\"\"\"",
+      "end$0"
+    ],
+    "description": "def render"
+  },
+  "LiveView render (Template)": {
+    "prefix": "ret",
+    "body": [
+      "@impl true",
+      "def render(assigns) do",
+      "\tPhoenix.View.render(${1:App}Web.${2:Page}View, \"${3:index}.html\", assigns)",
+      "end$0"
+    ],
+    "description": "def render (Template)"
+  }
+}
