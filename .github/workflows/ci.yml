@@ -23,9 +23,8 @@ jobs:
         uses: GabrielBB/xvfb-action@v1.2
         with:
           run: npm test
-      - name: Vscode release plugin
-        uses: JCofman/vscodeaction@master
+      - name: Publish
+        if: success() && startsWith(github.ref, 'refs/tags/releases/') && matrix.os == 'ubuntu-latest'
+        run: npm run deploy
         env:
-          PUBLISHER_TOKEN: ${{ secrets.VSCE_PAT }}
-        with:
-          args: publish -p $PUBLISHER_TOKEN
+          VSCE_PAT: $
