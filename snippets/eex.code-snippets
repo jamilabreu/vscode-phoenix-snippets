@@ -3,7 +3,7 @@
   "html-eex block": {
     "prefix": "e=",
     "body": ["<%= $1 %>$0"],
-    "description": "<%= %>"
+    "description": "<%= expression %>"
   },
 
   "html-eex case": {
