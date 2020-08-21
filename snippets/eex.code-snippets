@@ -6,6 +6,19 @@
     "description": "<%= %>"
   },
 
+  "html-eex case": {
+    "prefix": "case",
+    "body": [
+      "<%= case ${1:@expression} do %>",
+      "\t<% $2 -> %>",
+      "\t\t$3",
+      "\t<% true -> %>",
+      "\t\t$4",
+      "<% end %>$0"
+    ],
+    "description": "<%= case do %>"
+  },
+
   "html-eex cond": {
     "prefix": "cond",
     "body": [
@@ -114,5 +127,43 @@
       "</form>$0"
     ],
     "description": "<%= f = form_for %>"
+  },
+
+  "LiveView live_patch": {
+    "prefix": "lp",
+    "body": [
+      "<%= live_patch \"$1\", to: Routes.${2:resource}_path(@socket, :${2:show}) %>%0",
+      "$2"
+    ],
+    "description": "<%= live_redirect %>"
+  },
+
+  "LiveView live_patch block": {
+    "prefix": "lpb",
+    "body": [
+      "<%= live_patch to: Routes.${1:resource}_path(@socket, :${2:show}) do %>",
+      "\t$3",
+      "<% end %>$0"
+    ],
+    "description": "<%= live_redirect %> block"
+  },
+
+  "LiveView live_redirect": {
+    "prefix": "lr",
+    "body": [
+      "<%= live_redirect \"$1\", to: Routes.${2:resource}_path(@socket, :${2:show}) %>%0",
+      "$2"
+    ],
+    "description": "<%= live_redirect %>"
+  },
+
+  "LiveView live_redirect block": {
+    "prefix": "lrb",
+    "body": [
+      "<%= live_redirect to: Routes.${1:resource}_path(@socket, :${2:show}) do %>",
+      "\t$3",
+      "<% end %>$0"
+    ],
+    "description": "<%= live_redirect %> block"
   }
 }

@@ -81,6 +81,18 @@
     ],
     "description": "def handle_event"
   },
+
+  "LiveView handle_params": {
+    "prefix": "hp",
+    "body": [
+      "@impl true",
+      "def handle_params(params, _url, socket) do",
+      "\t{:noreply, socket}",
+      "end$0"
+    ],
+    "description": "Log output to console"
+  },
+
   "LiveView render": {
     "prefix": "re",
     "body": [
