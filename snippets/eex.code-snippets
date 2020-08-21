@@ -3,7 +3,7 @@
   "html-eex block": {
     "prefix": "e=",
     "body": ["<%= $1 %>$0"],
-    "description": "<%= %>"
+    "description": "<%= expression %>"
   },
 
   "html-eex case": {
@@ -112,6 +112,7 @@
     "body": ["<%= render \"${1:file}.html\", ${2:conn: ${3:@conn}} %>$0"],
     "description": "eex render"
   },
+
   "html-eex unless": {
     "prefix": "unless",
     "body": ["<%= unless ${1:true} do %>", "\t$2", "<% end %>$0"],
