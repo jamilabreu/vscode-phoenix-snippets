@@ -18,16 +18,14 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 10.x
-      - run: npm install
+      - run: npm install && npm install -g vsce
       - name: Run tests
         uses: GabrielBB/xvfb-action@v1.2
         with:
           run: npm test
       - name: Publish
         if: success() && matrix.os == 'ubuntu-latest'
-        run: npm run deploy
-        env:
-          VSCE_PAT: $
+        run: vsce package && vsce publish -p ${{ secrets.VSCE_PAT }}
 # on:
 #   push:
 #     branches:
