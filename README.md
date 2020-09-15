@@ -11,4 +11,4 @@ Get up and running faster on [VS Code](https://code.visualstudio.com/) with code
 
 ## Snippets
 
-Check out [the snippet files on Github](https://github.com/jamilabreu/vscode-phoenix-snippets/tree/master/snippets) for an up-to-date list of shortcuts.
+Check out [the snippet files on Github](https://github.com/jamilabreu/vscode-phoenix-snippets/tree/master/snippets) for an up-to-date list of snippets.
