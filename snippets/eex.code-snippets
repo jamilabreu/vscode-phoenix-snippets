@@ -44,6 +44,16 @@
     "description": "<% end %>"
   },
 
+  "html-eex for": {
+    "prefix": "for",
+    "body": [
+      "<%= for ${1:item} <- ${2:@${3:items}} do %>",
+      "\t$4",
+      "<% end %>$0"
+    ],
+    "description": "<%= for do %>"
+  },
+
   "html-eex form_for": {
     "prefix": "ff",
     "body": [
