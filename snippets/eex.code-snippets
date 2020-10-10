@@ -39,7 +39,7 @@
   },
 
   "html-eex end": {
-    "prefix": "end",
+    "prefix": "=end",
     "body": ["<% end %>$0"],
     "description": "<% end %>"
   },
@@ -103,7 +103,7 @@
   "html-eex link": {
     "prefix": "lt",
     "body": [
-      "<%= link ${1:text}, to: Routes.${2:resource}_path(@conn, :${3:index}) %>$0"
+      "<%= link ${1:text}, to: ${2:Routes.${3:resource}_path(@${4:conn}, :${5:index})} %>$0"
     ],
     "description": "<%= link to: %>"
   },
@@ -111,8 +111,8 @@
   "html-eex link (block)": {
     "prefix": "ltb",
     "body": [
-      "<%= link to: Routes.${1:resource}_path(@conn, :${2:index}) do %>",
-      "\t${3:text}",
+      "<%= link to: ${1:Routes.${2:resource}_path(@${3:conn}, :${4:index})} do %>",
+      "\t$5",
       "<% end %>$0"
     ],
     "description": "<%= link to: do %> block"
