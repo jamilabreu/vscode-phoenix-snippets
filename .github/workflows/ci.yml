@@ -25,7 +25,7 @@ jobs:
           run: npm test
       - name: Publish
         if: success() && matrix.os == 'ubuntu-latest'
-        run: vsce package && vsce publish -p ${{ secrets.VSCE_PAT }}
+        run: vsce package && vsce publish minor --force -p ${{ secrets.VSCE_PAT }}
 # on:
 #   push:
 #     branches:
