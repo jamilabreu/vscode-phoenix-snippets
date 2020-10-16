@@ -103,7 +103,7 @@
   "html-eex link": {
     "prefix": "lt",
     "body": [
-      "<%= link ${1:text}, to: ${2:Routes.${3:resource}_path(@${4:conn}, :${5:index})} %>$0"
+      "<%= link \"$1\", to: ${2:Routes.${3:resource}_path(@${4:conn}, :${5:index})} %>$0"
     ],
     "description": "<%= link to: %>"
   },
