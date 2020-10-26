@@ -51,6 +51,21 @@
       "end"
     ]
   },
+  "Phoenix LiveComponent": {
+    "prefix": "lc",
+    "body": [
+      "defmodule ${1:App}Web.${2:Page}Component do",
+      "\tuse ${1:App}Web, :live_component",
+      "\n\tdef render(assigns) do",
+      "\t\t~L\"\"\"",
+      "\t\t\"\"\"",
+      "\tend",
+      "\n\tdef mount(_params, _session, socket) do",
+      "\t\t$0{:ok, socket}",
+      "\tend",
+      "end"
+    ]
+  },
   "Phoenix View": {
     "prefix": "vi",
     "body": [
@@ -82,6 +97,17 @@
     "description": "def handle_event"
   },
 
+  "LiveView handle_info": {
+    "prefix": "hi",
+    "body": [
+      "@impl true",
+      "def handle_info(\"${1:msg}\", socket) do",
+      "\t$0{:noreply, socket}",
+      "end"
+    ],
+    "description": "def handle_info"
+  },
+
   "LiveView handle_params": {
     "prefix": "hp",
     "body": [
@@ -90,7 +116,7 @@
       "\t{:noreply, socket}",
       "end$0"
     ],
-    "description": "Log output to console"
+    "description": "def handle_params"
   },
 
   "LiveView render": {
