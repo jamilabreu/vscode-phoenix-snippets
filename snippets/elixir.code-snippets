@@ -60,7 +60,7 @@
       "\t\t~L\"\"\"",
       "\t\t\"\"\"",
       "\tend",
-      "\n\tdef mount(_params, _session, socket) do",
+      "\n\tdef mount(socket) do",
       "\t\t$0{:ok, socket}",
       "\tend",
       "end"
