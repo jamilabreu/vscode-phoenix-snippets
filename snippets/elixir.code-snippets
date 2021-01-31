@@ -8,7 +8,7 @@
 
   "IO.inspect/1": {
     "prefix": "io",
-    "body": ["IO.inspect(${1}, label: \"${1}\")$0"]
+    "body": ["IO.inspect(${1}${2:, label: \"${1}\"})$0"]
   },
 
   "Plug": {
@@ -68,11 +68,7 @@
   },
   "Phoenix View": {
     "prefix": "vi",
-    "body": [
-      "defmodule ${1:App}Web.${2:Page}View do",
-      "\tuse ${1:App}Web, :view$0",
-      "end"
-    ]
+    "body": ["defmodule ${1:App}Web.${2:Page}View do", "\tuse ${1:App}Web, :view$0", "end"]
   },
   "Sigil L": {
     "prefix": "sl",
