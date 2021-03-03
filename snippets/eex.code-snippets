@@ -46,18 +46,14 @@
 
   "html-eex for": {
     "prefix": "for",
-    "body": [
-      "<%= for ${1:item} <- ${2:@${3:items}} do %>",
-      "\t$4",
-      "<% end %>$0"
-    ],
+    "body": ["<%= for ${1:item} <- ${2:@${3:items}} do %>", "\t$4", "<% end %>$0"],
     "description": "<%= for do %>"
   },
 
   "html-eex form_for": {
     "prefix": "ff",
     "body": [
-      "<%= form_for ${1:@${2:changeset}}, Routes.${3:resource}_path(@conn, :${4:create})}, ${5:[$6]}, fn f -> %>",
+      "<%= form_for ${1:@${2:changeset}}, Routes.${3:resource}_path(@conn, :${4:create}), ${5:[$6]}, fn f -> %>",
       "\t$7",
       "<% end %>$0"
     ],
@@ -102,9 +98,7 @@
 
   "html-eex link": {
     "prefix": "lt",
-    "body": [
-      "<%= link \"$1\", to: ${2:Routes.${3:resource}_path(@${4:conn}, :${5:index})} %>$0"
-    ],
+    "body": ["<%= link \"$1\", to: ${2:Routes.${3:resource}_path(@${4:conn}, :${5:index})} %>$0"],
     "description": "<%= link to: %>"
   },
 
