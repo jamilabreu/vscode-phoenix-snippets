@@ -7,7 +7,7 @@ Get up and running faster on [VS Code](https://code.visualstudio.com/) with code
 ## Supported languages
 
 - elixir (.ex)
-- html-eex (.html.eex, .html.leex)
+- html-eex (.html.eex, .html.heex, .html.leex)
 
 ## Snippets
 
