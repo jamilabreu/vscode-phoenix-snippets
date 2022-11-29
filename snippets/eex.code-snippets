@@ -170,5 +170,10 @@
       "<% end %>$0"
     ],
     "description": "<%= live_redirect %> block"
+  },
+
+  "Sigil P": {
+    "prefix": "sp",
+    "body": ["~p\"$0\""]
   }
 }
