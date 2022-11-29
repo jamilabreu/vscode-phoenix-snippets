@@ -79,6 +79,10 @@
     "prefix": "sl",
     "body": ["~L\"\"\"", "\t<div>$0</div>", "\"\"\""]
   },
+  "Sigil P": {
+    "prefix": "sp",
+    "body": ["~p\"$0\""]
+  },
 
   // LiveView Snippets
   "LiveView assign": {
