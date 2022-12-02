@@ -7,16 +7,17 @@ on:
       - created
 jobs:
   build:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         os: [macos-latest, ubuntu-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Setup node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm install && npm install -g vsce
+      - run: npm i && npm i -g vsce
       - name: Run tests
         uses: GabrielBB/xvfb-action@v1.2
         with:
