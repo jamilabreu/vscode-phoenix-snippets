@@ -10,7 +10,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, ubuntu-latest, windows-latest]
+        os: [macos-11, ubuntu-latest, windows-latest]
     steps:
       - uses: actions/checkout@v3
       - name: Setup node
@@ -21,7 +21,8 @@ jobs:
       - name: Run tests
         uses: GabrielBB/xvfb-action@v1.6
         with:
-          run: npm test
+          node-version: 16
+        run: npm test
       - name: Publish
         if: success() && matrix.os == 'ubuntu-latest'
         run: vsce package && vsce publish -p ${{ secrets.VSCE_PAT }}
