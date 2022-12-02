@@ -19,7 +19,7 @@ jobs:
           node-version: 16
       - run: npm i && npm i -g vsce
       - name: Run tests
-        uses: GabrielBB/xvfb-action@v1.2
+        uses: GabrielBB/xvfb-action@v1.6
         with:
           run: npm test
       - name: Publish
