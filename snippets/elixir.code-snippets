@@ -79,9 +79,16 @@
     "prefix": "sl",
     "body": ["~L\"\"\"", "\t<div>$0</div>", "\"\"\""]
   },
+
+  "Sigil P": {
+    "prefix": "sp",
+    "body": ["~p\"$0\""]
+  },
+
   "Sigil H": {
     "prefix": "sh",
     "body": ["~H\"\"\"", "\t<div>$0</div>", "\"\"\""]
+
   },
 
   // LiveView Snippets
