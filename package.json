@@ -31,10 +31,10 @@
       }
     ]
   },
-  "devDependencies": {
-    "vsce": "^1.78.0"
-  },
   "scripts": {
     "deploy": "vsce publish"
+  },
+  "devDependencies": {
+    "vsce": "^2.15.0"
   }
 }
