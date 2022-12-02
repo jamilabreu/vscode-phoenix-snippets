@@ -2,7 +2,7 @@
   "name": "vscode-phoenix-snippets",
   "displayName": "Phoenix Snippets",
   "description": "Code snippets for Phoenix (Elixir) projects in VS Code (.ex, .html.eex, .html.leex)",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "publisher": "jamilabreu",
   "repository": {
     "type": "git",
