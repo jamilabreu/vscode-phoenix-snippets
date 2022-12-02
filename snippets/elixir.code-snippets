@@ -47,8 +47,8 @@
       "defmodule ${1:App}Web.${2:Page}Live do",
       "\tuse ${1:App}Web, :live_view",
       "\n\tdef render(assigns) do",
-      "\t\t~L\"\"\"",
-      "\t\t\"\"\"",
+      "\t\t~H\"\"\"",
+      "\n\t\t\"\"\"",
       "\tend",
       "\n\tdef mount(_params, _session, socket) do",
       "\t\t$0{:ok, socket}",
@@ -62,8 +62,8 @@
       "defmodule ${1:App}Web.${2:Page}Component do",
       "\tuse ${1:App}Web, :live_component",
       "\n\tdef render(assigns) do",
-      "\t\t~L\"\"\"",
-      "\t\t\"\"\"",
+      "\t\t~H\"\"\"",
+      "\n\t\t\"\"\"",
       "\tend",
       "\n\tdef mount(socket) do",
       "\t\t$0{:ok, socket}",
@@ -79,9 +79,16 @@
     "prefix": "sl",
     "body": ["~L\"\"\"", "\t<div>$0</div>", "\"\"\""]
   },
+
   "Sigil P": {
     "prefix": "sp",
     "body": ["~p\"$0\""]
+  },
+
+  "Sigil H": {
+    "prefix": "sh",
+    "body": ["~H\"\"\"", "\t<div>$0</div>", "\"\"\""]
+
   },
 
   // LiveView Snippets
@@ -129,7 +136,7 @@
     "body": [
       "@impl true",
       "def render(assigns) do",
-      "\t~L\"\"\"",
+      "\t~H\"\"\"",
       "\t\t${1:Text}",
       "\t\"\"\"",
       "end$0"
